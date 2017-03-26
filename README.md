@@ -42,9 +42,9 @@ Playback controls along the top will include Start, Pause, Restart and Reset but
 
 On the left, there will be an expandable menu allowing the user to control the sound event transition matrix and the color evolution matrix.
 
-On the right, will be an expandable menu allowing users to select the 'instruments'.
+On the left near the bottom, will be an expandable menu allowing users to select the 'instruments'.
 
-![wireframes](images/js_wireframe.jpeg)
+![wireframes](images/js_wireframes.png)
 
 ### Architecture and Technologies
 
@@ -87,7 +87,7 @@ In addition to the webpack entry file, there will be four scripts involved in th
 - Make sure that starting, stopping, and resetting works.
 
 
-**Day 4**: Install the controls for the user to interact with the game.  Style the frontend, making it polished and professional.  Goals for the day:
+**Day 4**: Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
 
 - Create controls for game speed, stop, start, restrat, reset
 - Create controls for color selection and matrix manipulation
