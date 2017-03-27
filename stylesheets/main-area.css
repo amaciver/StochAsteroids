@@ -1,0 +1,15 @@
+#main {
+  display: flex;
+  justify-content: center;
+  border: 1px solid blue;
+  padding: 50px;
+}
+
+.interaction-area {
+  width: 1200px;
+}
+
+#canvas {
+  float: right;
+  border: 1px solid blue;
+}
