@@ -4,9 +4,9 @@
 
 StochAsteroids is a generative music tool combining the physics and visual impact of the classic Asteroids game with Markov chain state evolutions.
 
-Markov chains define evolution of state probabilistically based on previous state.
+Markov chains are a mathematical construct that probabilistically govern the evolution of an object based on its previous state.
 
-Users create an initial state comprising asteroids of differing sizes, velocities, and colors. As the simulation runs, every collision will result in a sound event.
+Users create an initial state comprising asteroids of differing sizes, velocities, and colors. As the simulation runs, every collision will result in a sound and visual event.
 
 Additionally, users are able to define:
 * A Markov matrix that governs the nature of the sound event based on the color state of the colliding objects.
@@ -50,8 +50,8 @@ On the left near the bottom, will be an expandable menu allowing users to select
 
 This project will be implemented with the following technologies:
 
-- Vanilla JavaScript and `jquery` for overall structure and game logic,
-- `Easel.js` with `HTML5 Canvas` for DOM manipulation and rendering,
+- Vanilla JavaScript for overall structure and game logic,
+- `Easel.js` (maybe) with `HTML5 Canvas` for DOM manipulation and rendering,
 - `Web Audio API` for sound generation, processing and control.
 - Webpack to bundle and serve up the various scripts.
 
