@@ -69,16 +69,16 @@ In addition to the webpack entry file, there will be four scripts involved in th
 
 **Day 1**: Setup all necessary Node modules, including getting webpack up and running and `Easel.js` installed.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  Learn the basics of `Easel.js` and `Web Audio API`.  Goals for the day:
 
-- Get a green bundle with `webpack`
+- ~~Get a green bundle with `webpack`~~ **DONE**
 - Learn enough `Easel.js` and `Web Audio` to render an object to the `Canvas` element and create a sound
-- Port over the relevant pieces of my Asteroids(with collision physics) project and implement Asteroid creation
+- ~~Port over the relevant pieces of my Asteroids(with collision physics) project and implement Asteroid creation~~ **DONE**
 
 **Day 2**: Dedicate this day to learning the `Web Audio` API.  First, build out the `AudioEvent` object to connect to the `Board` object.  Then, use `board.js` to create and render `Asteroid`s and `AudioEvent`s. Goals for the day:
 
 - Complete the `asteroids.js` module (constructor, update functions, colors)
 - Get sounds to play on collisions
 - Get collision graphics working
-- Make the `Asteroid`s able to be created with mouse.
+- ~~Make the `Asteroid`s able to be created with mouse.~~ **DONE**
 
 **Day 3**: Create the logic backend. Build out modular functions for handling the different evolutions. Goals for the day:
 
@@ -89,7 +89,7 @@ In addition to the webpack entry file, there will be four scripts involved in th
 
 **Day 4**: Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
 
-- Create controls for game speed, stop, start, restrat, reset
+- Create controls for game speed, stop, start, restart, reset
 - Create controls for color selection and matrix manipulation
 - Build out list of instruments
 - Have a styled `Canvas`, nice looking controls and title
