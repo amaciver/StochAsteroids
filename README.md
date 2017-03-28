@@ -21,8 +21,6 @@ Duration is determined as the difference in mass of the colliding objects.
 In StochAsteroids, users will be able to:
 
 - [ ] Create asteroids of custom size, color, and velocity vector
-- [ ] Alter the Markov matrix governing sound events
-- [ ] Alter the Markov matrix governing color state evolutions
 - [ ] Randomly seed the initial state for demoing or exploration purposes
 - [ ] Start, pause, restart, and reset the simulation
 - [ ] Select from a list of 'instruments' that will serve as the bases for sound events.
@@ -51,13 +49,13 @@ On the left near the bottom, will be an expandable menu allowing users to select
 This project will be implemented with the following technologies:
 
 - Vanilla JavaScript for overall structure and game logic,
-- `Easel.js` (maybe) with `HTML5 Canvas` for DOM manipulation and rendering,
+- `HTML5 Canvas` for DOM manipulation and rendering,
 - `Web Audio API` for sound generation, processing and control.
 - Webpack to bundle and serve up the various scripts.
 
 In addition to the webpack entry file, there will be four scripts involved in this project:
 
-`board.js`: this script will handle the logic for creating and updating the necessary `Easel.js` elements and rendering them to the DOM.
+`board.js`: this script will handle the logic for creating and updating the necessary DOM elements.
 
 `asteroids.js`: this script will house the physics logic for the asteroids.
 
@@ -67,38 +65,39 @@ In addition to the webpack entry file, there will be four scripts involved in th
 
 ### Implementation Timeline
 
-**Day 1**: Setup all necessary Node modules, including getting webpack up and running and `Easel.js` installed.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  Learn the basics of `Easel.js` and `Web Audio API`.  Goals for the day:
+**Day 1**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  Learn the basics of `Web Audio API`.  Goals for the day:
 
-- ~~Get a green bundle with `webpack`~~ **DONE**
-- Learn enough `Easel.js` and `Web Audio` to render an object to the `Canvas` element and create a sound
-- ~~Port over the relevant pieces of my Asteroids(with collision physics) project and implement Asteroid creation~~ **DONE**
+- [x] Get a green bundle with `webpack`
+- [x] Learn enough `Web Audio` to render an object to the `Canvas` element and create a sound
+- [x] Port over the relevant pieces of my Asteroids(with collision physics) project and implement Asteroid creation
 
 **Day 2**: Dedicate this day to learning the `Web Audio` API.  First, build out the `AudioEvent` object to connect to the `Board` object.  Then, use `board.js` to create and render `Asteroid`s and `AudioEvent`s. Goals for the day:
 
-- Complete the `asteroids.js` module (constructor, update functions, colors)
-- Get sounds to play on collisions
-- Get collision graphics working
-- ~~Make the `Asteroid`s able to be created with mouse.~~ **DONE**
+- [ ] Complete the `asteroids.js` module (constructor, update functions, colors)
+- [x] Get sounds to play on collisions
+- [ ] Get collision graphics working
+- [x] Make the `Asteroid`s able to be created with mouse.
 
 **Day 3**: Create the logic backend. Build out modular functions for handling the different evolutions. Goals for the day:
 
-- Export an `AudioEvent` object with correct type and handling logic
-- Have a functional screen on the `Canvas` frontend that correctly handles creation and running of the simulation.
-- Make sure that starting, stopping, and resetting works.
+- [ ] Export an `AudioEvent` object with correct type and handling logic
+- [ ] Have a functional screen on the `Canvas` frontend that correctly handles creation and running of the simulation.
+- [ ] Make sure that starting, stopping, and resetting works.
 
 
 **Day 4**: Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
 
-- Create controls for game speed, stop, start, restart, reset
-- Create controls for color selection and matrix manipulation
-- Build out list of instruments
-- Have a styled `Canvas`, nice looking controls and title
+- [ ] Create controls for game speed, stop, start, restart, reset
+- [ ] Build out list of instruments
+- [ ] Have a styled `Canvas`, nice looking controls and title
 
 
 ### Bonus features
 
 There are many directions in which this project could evolve.
 
+- [ ] Alter the Markov matrix governing sound events
+- [ ] Alter the Markov matrix governing color state evolutions
 - [ ] Add recording and saving of output
 - [ ] Allow users to import their own sounds
 - [ ] Allow users to draw obstacles and restrictive spaces into the interaction environment.
