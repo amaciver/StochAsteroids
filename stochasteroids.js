@@ -25,5 +25,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   audio.loadSound('sounds/dink.wav');
   // setTimeout(() => audio.playSound(0), 2000);
   const gv = new GameView(ctx, audio);
+  gv.init();
   gv.start();
 });

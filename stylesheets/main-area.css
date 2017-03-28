@@ -37,3 +37,9 @@ p:hover {
     cursor:pointer;
     opacity:0.8;
 }
+
+
+.mute {
+  width: 100px;
+  height: 20px;
+}
