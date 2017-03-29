@@ -1,8 +1,12 @@
 #main {
   display: flex;
   justify-content: center;
-  border: 1px solid blue;
+  /*border-left: 2px solid #bfcad2;
+  border-right: 2px solid #bfcad2;
+  border-bottom: 2px solid #bfcad2;
+  border: 3px solid gray;*/
   padding: 50px;
+  border-radius: 15px;
 }
 
 .interaction-area {
@@ -11,13 +15,51 @@
 
 #canvas {
   float: right;
-  border: 1px solid blue;
+  border: 3px solid gray;
+  border-radius: 15px;
+  max-width: 1000px;
+  height: 600px;
 }
 
+.header {
+  background-color: white;
+  border-bottom: 2px solid #bfcad2;
+  min-height: 60px;
+  max-height: 60px;
+  /*position: fixed;*/
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  /*margin-bottom: 15px;*/
+}
+
+.header-content {
+  font-size: 2em;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1280px;
+  justify-content: center;
+  display: flex;
+}
+
+
+
+.title {
+  display: flex;
+  text-shadow: 2px 2px #858585;
+}
+
+.first-title {
+  color: #ececec;
+}
+.second-title {
+  color: black;
+}
 
 .play {
     display:inline-block;
     margin:5px;
+    margin-bottom: 10px;
     width: 24px;
     height: 32px;
     background-repeat: no-repeat;
@@ -27,6 +69,8 @@
 .stop {
     display:inline-block;
     margin:5px;
+    margin-bottom: 10px;
+
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
@@ -80,4 +124,35 @@ p:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.tools-header {
+  width: 1000px;
+  display: flex;
+  float: right;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.mute {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 24px;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.mute:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+#myBtn {
+    /* position: absolute; */
+    height: 30px;
 }
