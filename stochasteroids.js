@@ -13,7 +13,7 @@ import GameView from './lib/game_view.js';
 // window.Game = Game;
 // window.Asteroid = Asteroid;
 // window.MovingObject = MovingObject;
-window.GameView = GameView;
+// window.GameView = GameView;
 // window.Util = Util;
 
 
@@ -21,6 +21,9 @@ window.GameView = GameView;
 document.addEventListener("DOMContentLoaded", function(event) {
 
   const canvasEl = document.getElementsByTagName("canvas")[0];
+  const canvasWrapper = document.getElementById("canvas-wrapper");
+  canvasWrapper.width = window.innerWidth-200;
+  canvasEl.width = window.innerWidth-200;
   const ctx = canvasEl.getContext("2d");
   let audio = new Audio();
 

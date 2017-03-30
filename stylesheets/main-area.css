@@ -24,7 +24,7 @@
 .canvas-wrapper {
   position: relative;
   /*margin-top: 60px;*/
-  width: 1000px;
+  /*width: 1000px;*/
   height: 600px;
 }
 #canvas {
