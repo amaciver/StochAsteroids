@@ -179,19 +179,63 @@
 }
 
 #myBtn {
-    /* position: absolute; */
-    height: 30px;
-    position: absolute;
+  position: absolute;
+  height: 30px;
+  bottom: 20px;
 }
 
 
 .dropdown-wrapper {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 9px;
+  top: 5px;
 }
-.color-box {
+.color-boxes {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 40px;
+  align-items: flex-end;
+  top: -1px;
+  right: 4px;
+}
+.color-boxes:hover {
+  cursor: pointer;
+}
+.color-box-red {
   height: 10px;
   width: 10px;
   background: red;
+  margin-right: 3px;
+}
+.color-box-blue {
+  height: 10px;
+  width: 10px;
+  background: blue;
+  margin-right: 3px;
+}
+.color-box-green {
+  height: 10px;
+  width: 10px;
+  background: green;
+  margin-right: 3px;
+}
+.color-box-yellow {
+  height: 10px;
+  width: 10px;
+  background: yellow;
+  margin-right: 3px;
+}
+.color-box-purple {
+  height: 10px;
+  width: 10px;
+  background: purple;
+  margin-right: 3px;
+}
+.hide {
+  opacity: 0;
+  transition: opacity .25s;
+}
+.hide:hover {
+  opacity: 1;
 }
