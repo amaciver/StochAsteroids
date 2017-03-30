@@ -12,14 +12,17 @@
 
 .interaction-area {
   width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/*.canvas-wrapper {
-  max-width: 1000px;
-  max-height: 600px;
+.canvas-wrapper {
+  position: relative;
+  /*margin-top: 60px;*/
   width: 1000px;
   height: 600px;
-}*/
+}
 #canvas {
   /*float: right;*/
   border: 3px solid gray;
@@ -178,4 +181,17 @@
 #myBtn {
     /* position: absolute; */
     height: 30px;
+    position: absolute;
+}
+
+
+.dropdown-wrapper {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.color-box {
+  height: 10px;
+  width: 10px;
+  background: red;
 }
