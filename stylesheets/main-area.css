@@ -183,14 +183,28 @@
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    text-align: center;
+    margin: 15% auto;
+    line-height: 40px;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 15px;
+    box-shadow: 1px 1px 6px 9px grey;
     width: 80%; /* Could be more or less, depending on screen size */
+}
+.intro {
+  width: 50%;
+  font-size: 30px;
+  font-family: Lato;
 }
 
 .modal-text {
   word-wrap: break-word;
+  color: black;
+  text-shadow: -0.5px 1px 6px gray;
+}
+.bold {
+  font-weight: bold;
 }
 
 /* The Close Button */
@@ -199,6 +213,7 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    font-family: 'Pacifico', cursive;
 }
 
 .close:hover,
