@@ -545,20 +545,17 @@ var GameView = function () {
 
       // Modal handling
       var matrixModal = document.getElementById('matrix-modal');
-      var modalText = document.querySelector('.modal-text');
-      modalText.innerHTML = '' + this.game.matrix;
-      var matrixBtn = document.getElementById("myBtn");
+      // const modalText = document.querySelector('.modal-text');
+      // modalText.innerHTML = `${this.game.matrix}`;
+      var moreInfo = document.querySelector('.more-info');
+      var moreInfoLink = document.querySelector('.more-info-link');
+      // const matrixBtn = document.getElementById("myBtn");
       var matrixClose = document.getElementsByClassName("close")[0];
-      matrixBtn.onclick = function () {
+      moreInfo.onclick = function () {
         matrixModal.style.display = "block";
       };
       matrixClose.onclick = function () {
         matrixModal.style.display = "none";
-      };
-      window.onclick = function (event) {
-        if (event.target == matrixModal) {
-          matrixModal.style.display = "none";
-        }
       };
 
       var introModal = document.getElementById('intro-modal');
@@ -571,9 +568,17 @@ var GameView = function () {
         introModal.style.display = "none";
       };
       window.onclick = function (event) {
+        if (event.target == matrixModal) {
+          matrixModal.style.display = "none";
+        }
         if (event.target == introModal) {
           introModal.style.display = "none";
         }
+      };
+
+      moreInfoLink.onclick = function () {
+        introModal.style.display = "none";
+        matrixModal.style.display = "block";
       };
 
       introModal.style.display = "block";
