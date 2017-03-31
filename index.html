@@ -27,73 +27,77 @@
 
       <div class="interaction-area">
 
-        <div class="tools-header">
-          <header class="header">
-            <div class="header-content">
 
-              <div class="title">
-                <div class="first-title">
-                  Stoch
-                </div>
-                <div class="second-title">
-                  Asteroids
-                </div>
+        <!-- The Modal -->
+        <div id="matrix-modal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="modal-text">Some text in the Modal..</p>
+          </div>
+
+        </div>
+        <div id="intro-modal" class="modal">
+
+          <!-- Modal content -->
+          <div class="intro modal-content">
+            <span id='close-intro' class="close">&times;</span>
+            <p class="modal-text">
+              <div class="modal-text">
+                Draw some circles by clicking and dragging. Select color and set their direction.
               </div>
-
-            </div>
-          </header>
-          <div class="controls">
-            <div class="play">
-              <i class="fa fa-play" aria-hidden="true"></i>
-            </div>
-            <div class="stop">
-              <i class="fa fa-stop" aria-hidden="true"></i>
-            </div>
-            <div class="step-backwards">
-              <i class="fa fa-step-backward" aria-hidden="true"></i>
-            </div>
-            <div class="random">
-              Random Seed
-            </div>
-            <!-- <p id='play' class="play"></p> -->
-            <!-- <p id='stop' class="stop"></p> -->
-          </div>
-
-          <div id='mute' class="mute">Mute</div>
-
-
-          <!-- The Modal -->
-          <div id="matrix-modal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p class="modal-text">Some text in the Modal..</p>
-            </div>
-
-          </div>
-          <div id="intro-modal" class="modal">
-
-            <!-- Modal content -->
-            <div class="intro modal-content">
-              <span id='close-intro' class="close">&times;</span>
               <p class="modal-text">
-                <div class="modal-text">
-                  Draw some circles by clicking and dragging. Select color and set their direction.
-                </div>
-                <p class="modal-text">
-                  Press play to make them move, and listen to the beautiful sounds. Select different sound sets at the bottom.
-                </p>
-                <p class="modal-text">
-                  Click <span class='bold'>more info</span> to learn about what's going on behind the scenes!
-                </p>
+                Press play to make them move, and listen to the beautiful sounds. Select different sound sets at the bottom.
               </p>
-            </div>
-
+              <p class="modal-text">
+                Click <span class='bold'>more info</span> to learn about what's going on behind the scenes!
+              </p>
+            </p>
           </div>
+
         </div>
 
         <div id='canvas-wrapper' class="canvas-wrapper">
+
+          <div class="tools-header">
+            <!-- <header class="header">
+              <div class="header-content">
+
+
+
+              </div>
+            </header> -->
+            <div class="controls">
+              <div class="play">
+                <i class="fa fa-play" aria-hidden="true"></i>
+              </div>
+              <div class="stop">
+                <i class="fa fa-stop" aria-hidden="true"></i>
+              </div>
+              <div class="step-backwards">
+                <i class="fa fa-step-backward" aria-hidden="true"></i>
+              </div>
+              <div class="random">
+                Random Seed
+              </div>
+              <!-- <p id='play' class="play"></p> -->
+              <!-- <p id='stop' class="stop"></p> -->
+            </div>
+
+            <div class="title">
+              <div class="first-title">
+                Stoch
+              </div>
+              <div class="second-title">
+                Asteroids
+              </div>
+            </div>
+
+            <div id='mute' class="mute">Mute</div>
+          </div>
+
+
           <div class="sounds-wrapper">
             sounds
             <div class="sounds-selection hide">

@@ -8,7 +8,7 @@
   border-bottom: 2px solid #bfcad2;
   border: 3px solid gray;*/
   padding: 50px;
-  padding-top: 0px;
+  padding-top: 2vh;
   border-radius: 15px;
 }
 
@@ -96,6 +96,10 @@
 
 
 .title {
+  position: absolute;
+  left: 40%;
+  top: -60px;
+  font-size: 2em;
   display: flex;
   text-shadow: 1px 2px #858585;
   letter-spacing: 1px;
@@ -110,7 +114,7 @@
 .links {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 15px;
 }
 
 .link-img {
@@ -161,9 +165,7 @@
 
 
 .mute {
-  width: 100px;
-  height: 20px;
-  z-index: 2;
+
 }
 
 /* The Modal (background) */
@@ -185,6 +187,7 @@
     background-color: #fefefe;
     text-align: center;
     margin: 15% auto;
+    margin-top: 25vh;
     line-height: 40px;
     padding: 20px;
     border: 1px solid #888;
@@ -193,9 +196,13 @@
     width: 80%; /* Could be more or less, depending on screen size */
 }
 .intro {
-  width: 50%;
-  font-size: 30px;
+  min-width: 50%;
+  max-width: 70%;
+  width: 400px;
+  max-height: 60vh;
+  font-size: 25px;
   font-family: Lato;
+  margin-top: 20vh;
 }
 
 .modal-text {
@@ -224,7 +231,7 @@
 }
 
 .tools-header {
-  width: 1000px;
+  width: 100%;
   display: flex;
   /*float: right;*/
   align-items: center;
@@ -234,15 +241,23 @@
 .controls {
   display: flex;
   align-items: center;
+  position: absolute;
+  top: -63px;
+  left: 20px;
 }
 
 .mute {
+  width: 100px;
+  z-index: 2;
   display: flex;
-  height: 100%;
+  position: absolute;
+  height: 30px;
   align-items: center;
   font-size: 24px;
   justify-content: flex-end;
   padding-right: 10px;
+  top: -39px;
+  right: 5px;
 }
 
 .mute:hover {
