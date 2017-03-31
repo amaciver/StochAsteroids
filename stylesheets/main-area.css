@@ -25,7 +25,7 @@
   position: relative;
   /*margin-top: 60px;*/
   /*width: 1000px;*/
-  height: 600px;
+  /*height: 600px;*/
 }
 #canvas {
   /*float: right;*/
@@ -43,7 +43,7 @@
 
 .sounds-wrapper {
   position: absolute;
-  bottom: 5px;
+  bottom: 15px;
   left: 20px;
   display: flex;
 }
@@ -117,6 +117,9 @@
   width: 25px;
   height: 25px;
 }
+.link-img:hover {
+  opacity: .6;
+}
 
 .play {
   font-size: 35px;
@@ -146,6 +149,14 @@
 .step-backwards:hover {
   cursor: pointer;
   opacity: 0.6;
+}
+
+.random {
+  z-index: 3;
+}
+.random:hover {
+  cursor: pointer;
+  opacity: .6;
 }
 
 
@@ -254,11 +265,17 @@
   background: red;
   margin-right: 3px;
 }
+.color-box-red:hover {
+  box-shadow: 0px 0px 2px 2px #8b8b8b;
+}
 .color-box-blue {
   height: 10px;
   width: 10px;
   background: blue;
   margin-right: 3px;
+}
+.color-box-blue:hover {
+  box-shadow: 0px 0px 2px 2px #8b8b8b;
 }
 .color-box-green {
   height: 10px;
@@ -266,17 +283,29 @@
   background: green;
   margin-right: 3px;
 }
+.color-box-green:hover {
+  box-shadow: 0px 0px 2px 2px #8b8b8b;
+}
 .color-box-yellow {
   height: 10px;
   width: 10px;
   background: yellow;
   margin-right: 3px;
 }
+.color-box-yellow:hover {
+  box-shadow: 0px 0px 2px 2px #8b8b8b;
+}
 .color-box-purple {
   height: 10px;
   width: 10px;
   background: purple;
   margin-right: 3px;
+}
+.color-box-purple:hover {
+  box-shadow: 0px 0px 2px 2px #8b8b8b;
+}
+.selected {
+  box-shadow: 0px 0px 2px 2px #8b8b8b;
 }
 .hide {
   opacity: 0;

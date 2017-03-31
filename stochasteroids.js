@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
   const canvasEl = document.getElementsByTagName("canvas")[0];
   const canvasWrapper = document.getElementById("canvas-wrapper");
   canvasWrapper.width = window.innerWidth-200;
+  canvasWrapper.height = window.innerHeight*.75;
   canvasEl.width = window.innerWidth-200;
+  canvasEl.height = window.innerHeight*.75;
   const ctx = canvasEl.getContext("2d");
   let audio = new Audio();
 
