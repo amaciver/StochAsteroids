@@ -27,20 +27,13 @@
 
       <div class="interaction-area">
 
-
-        <!-- The Modal -->
         <div id="matrix-modal" class="modal">
-
-          <!-- Modal content -->
-          <div class="modal-content">
+          <div class="intro modal-content">
             <span class="close">&times;</span>
-            <p class="modal-text">Some text in the Modal..</p>
+            <p class="modal-text">The notes you hear are determined by the colors of the colliding objects, based on a probability matrix connecting the two colors to the range of notes. We use Markov chains to determine the evolution of the colors from one collision to the next.</p>
           </div>
-
         </div>
         <div id="intro-modal" class="modal">
-
-          <!-- Modal content -->
           <div class="intro modal-content">
             <span id='close-intro' class="close">&times;</span>
             <p class="modal-text">
@@ -51,21 +44,16 @@
                 Press play to make them move, and listen to the beautiful sounds. Select different sound sets at the bottom.
               </p>
               <p class="modal-text">
-                Click <span class='bold'>more info</span> to learn about what's going on behind the scenes!
+                Click <span class='bold more-info-link'>more info</span> to learn about what's going on behind the scenes!
               </p>
             </p>
           </div>
-
         </div>
 
         <div id='canvas-wrapper' class="canvas-wrapper">
-
           <div class="tools-header">
             <!-- <header class="header">
               <div class="header-content">
-
-
-
               </div>
             </header> -->
             <div class="controls">
@@ -81,8 +69,6 @@
               <div class="random">
                 Random Seed
               </div>
-              <!-- <p id='play' class="play"></p> -->
-              <!-- <p id='stop' class="stop"></p> -->
             </div>
 
             <div class="title">
@@ -117,12 +103,13 @@
               <div class="color-box-purple">  </div>
             </div>
           </div>
+          <div class="more-info">more info</div>
           <canvas id ="canvas" width = "1000", height = "600"></canvas>
         </div>
 
         <script src="bundle.js" charset="utf-8"></script>
       </div>
-      <button id="myBtn">Open Modal</button>
+      <!-- <button id="myBtn">Open Modal</button> -->
     </div>
   </body>
 </html>

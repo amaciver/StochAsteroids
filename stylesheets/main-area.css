@@ -344,3 +344,17 @@
 .hide:hover {
   opacity: 1;
 }
+
+.more-info {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+.more-info:hover {
+  cursor: pointer;
+}
+
+.more-info-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
