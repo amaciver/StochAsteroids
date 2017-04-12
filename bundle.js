@@ -86,9 +86,6 @@ var Util = {
     childClass.prototype = Object.create(parentClass.prototype);
     childClass.prototype.constructor = childClass;
   },
-
-
-  // Scale the length of a vector by the given amount.
   scale: function scale(vec, m) {
     return [vec[0] * m, vec[1] * m];
   },
@@ -116,7 +113,6 @@ var Util = {
     if (theta < 0) {
       theta = 2 * Math.PI + theta;
     }
-    // console.log(theta);
     return theta;
   },
   magnitude: function magnitude(vel) {
@@ -246,8 +242,6 @@ var Util = {
           }
         }
       }
-      // console.log(this.distance([obj1.pos[0]+v1x, obj1.pos[1]+v1y], [obj2.pos[0]+v2x, obj2.pos[1]+v1y]) < obj1.radius+obj2.radius);
-      // debugger;
     }
     obj1.vel = [v1x, v1y];
     obj2.vel = [v2x, v2y];
@@ -424,7 +418,7 @@ var Audio = function () {
     }
   }, {
     key: "loadSounds",
-    value: function loadSounds(sources) {
+    value: function loadSounds(sources, cb) {
       var _this = this;
 
       // Note: this loads asynchronously
@@ -445,6 +439,9 @@ var Audio = function () {
 
         request.send();
       });
+      if (cb) {
+        setTimeout(cb, 400);
+      };
     }
   }, {
     key: "playSound",
@@ -544,41 +541,55 @@ var GameView = function () {
       redBox.className += " selected";
 
       // Modal handling
-      var matrixModal = document.getElementById('matrix-modal');
-      // const modalText = document.querySelector('.modal-text');
-      // modalText.innerHTML = `${this.game.matrix}`;
       var moreInfo = document.querySelector('.more-info');
+
+      var moreInfoModal = document.getElementById('more-info-modal');
+      var introModal = document.getElementById('intro-modal');
+      var markovModal = document.getElementById('markov-modal');
+
       var moreInfoLink = document.querySelector('.more-info-link');
-      // const matrixBtn = document.getElementById("myBtn");
-      var matrixClose = document.getElementsByClassName("close")[0];
+      var markovLink = document.querySelector('.markov-link');
+
+      var moreInfoClose = document.getElementById("close-info");
+      var introClose = document.getElementById("close-intro");
+      var markovClose = document.getElementById("close-markov");
+
       moreInfo.onclick = function () {
-        matrixModal.style.display = "block";
-      };
-      matrixClose.onclick = function () {
-        matrixModal.style.display = "none";
+        moreInfoModal.style.display = "block";
       };
 
-      var introModal = document.getElementById('intro-modal');
-      // const modalText = document.querySelector('.modal-text');
-      // modalText.innerHTML = `${this.game.matrix}`;
-      // const btn = document.getElementById("matrix-modal");
-      var introClose = document.getElementById("close-intro");
-      // btn.onclick = () => { introModal.style.display = "block"; }
+      moreInfoClose.onclick = function () {
+        moreInfoModal.style.display = "none";
+      };
       introClose.onclick = function () {
         introModal.style.display = "none";
       };
+      markovClose.onclick = function () {
+        markovModal.style.display = "none";
+        moreInfoModal.style.display = "block";
+      };
+
       window.onclick = function (event) {
-        if (event.target == matrixModal) {
-          matrixModal.style.display = "none";
+        if (event.target == moreInfoModal) {
+          moreInfoModal.style.display = "none";
         }
         if (event.target == introModal) {
           introModal.style.display = "none";
+        }
+        if (event.target == markovModal) {
+          markovModal.style.display = "none";
+          moreInfoModal.style.display = "block";
         }
       };
 
       moreInfoLink.onclick = function () {
         introModal.style.display = "none";
-        matrixModal.style.display = "block";
+        moreInfoModal.style.display = "block";
+      };
+
+      markovLink.onclick = function () {
+        moreInfoModal.style.display = "none";
+        markovModal.style.display = "block";
       };
 
       introModal.style.display = "block";
@@ -602,7 +613,6 @@ var GameView = function () {
       });
       stopButton.addEventListener('click', function () {
         if (_this.playing === true) {
-          // console.log('stop');
           _this.playing = false;
           _this.stop();
         }
@@ -620,7 +630,6 @@ var GameView = function () {
         }
       });
       random.addEventListener('click', function () {
-        console.log("random");
         _this.ctx.clearRect(0, 0, _this.canvasEl.width, _this.canvasEl.height);
         _this.game = new _game2.default(_this.audio, _utils2.default.getRandomInt(2, 7), _this.ctx);
         _this.game.draw(_this.ctx);
@@ -681,12 +690,24 @@ var GameView = function () {
 
       //Sounds Selector
       sounds.addEventListener('change', function (e) {
-        _this.audio.buffers = [];
-        if (e.target.value === "sources1") {
-          _this.audio.loadSounds(sources1);
-        }
-        if (e.target.value === "sources2") {
-          _this.audio.loadSounds(sources2);
+        if (_this.playing === true) {
+          _this.stop();
+          _this.audio.buffers = [];
+          if (e.target.value === "sources1") {
+            _this.audio.loadSounds(sources1, _this.start);
+          }
+          if (e.target.value === "sources2") {
+            _this.audio.loadSounds(sources2, _this.start);
+          }
+        } else {
+          _this.audio.buffers = [];
+
+          if (e.target.value === "sources1") {
+            _this.audio.loadSounds(sources1);
+          }
+          if (e.target.value === "sources2") {
+            _this.audio.loadSounds(sources2);
+          }
         }
       });
 
