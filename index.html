@@ -14,12 +14,12 @@
         <ul>
           <li>
             <a href="https://github.com/amaciver/StochAsteroids">
-              <img class="link-img" src="/images/github-logo.png" alt="github"></li>
+              <img class="link-img" src="http://res.cloudinary.com/couchsmurfing/image/upload/v1492022197/brains/github-logo.png" alt="github"></li>
             </a>
           <li>
             <a href="https://www.linkedin.com/in/andrew-maciver-91028956/">
 
-              <img class="link-img" src="/images/linkedin-logo.png" alt="linkedin">
+              <img class="link-img" src="http://res.cloudinary.com/couchsmurfing/image/upload/v1492022197/brains/linkedin-logo.png" alt="linkedin">
             </a>
           </li>
         </ul>
@@ -27,10 +27,10 @@
 
       <div class="interaction-area">
 
-        <div id="matrix-modal" class="modal">
+        <div id="more-info-modal" class="modal">
           <div class="intro modal-content">
-            <span class="close">&times;</span>
-            <p class="modal-text">The notes you hear are determined by the colors of the colliding objects, based on a probability matrix connecting the two colors to the range of notes. We use Markov chains to determine the evolution of the colors from one collision to the next.</p>
+            <span id='close-info' class="close">&times;</span>
+            <p class="modal-text">The notes you hear are determined by the colors of the colliding objects, based on a probability matrix connecting the two colors to the range of notes. <span class="bold markov-link">Markov chains</span>  determine the evolution of the colors from one collision to the next.</p>
           </div>
         </div>
         <div id="intro-modal" class="modal">
@@ -38,13 +38,29 @@
             <span id='close-intro' class="close">&times;</span>
             <p class="modal-text">
               <div class="modal-text">
-                Draw some circles by clicking and dragging. Select color and set their direction.
+                Select a color and draw some circles by clicking and dragging to set their size and direction.
               </div>
               <p class="modal-text">
-                Press play to make them move, and listen to the beautiful sounds. Select different sound sets at the bottom.
+                Press 'play' to make them move and 'back' to reset. Listen to the beautiful sounds. Select different sound sets at the bottom.
               </p>
               <p class="modal-text">
                 Click <span class='bold more-info-link'>more info</span> to learn about what's going on behind the scenes!
+              </p>
+            </p>
+          </div>
+        </div>
+        <div id='markov-modal' class="modal">
+          <div class="markov modal-content">
+            <span id='close-markov' class="close">&times;</span>
+            <p class="modal-text">
+              <div class="modal-text">
+                Markov Chains are matrices that relate the current state of an object to its next state via probabilities.
+              </div>
+              <p class="modal-text">
+                <div class="flex space-around modal-text">
+                  For example:
+                  <img class="evolution" src='/images/color-evolution-diagram.png'>
+                </div>
               </p>
             </p>
           </div>
@@ -63,7 +79,10 @@
               <div class="stop">
                 <i class="fa fa-stop" aria-hidden="true"></i>
               </div>
-              <div class="step-backwards">
+              <div class="step-backwards tooltip">
+
+                <span class="tooltiptext">Reset</span>
+
                 <i class="fa fa-step-backward" aria-hidden="true"></i>
               </div>
               <div class="random">
@@ -94,8 +113,8 @@
             </div>
           </div>
           <div class="dropdown-wrapper">
-            select color
-            <div class="color-boxes hide">
+            <!-- select color -->
+            <div class="color-boxes">
               <div class="color-box-red">  </div>
               <div class="color-box-blue">  </div>
               <div class="color-box-green">  </div>

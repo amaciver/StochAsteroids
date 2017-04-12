@@ -10,6 +10,7 @@
   padding: 50px;
   padding-top: 2vh;
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .interaction-area {
@@ -45,16 +46,17 @@
   position: absolute;
   bottom: 15px;
   left: 20px;
+  /*bottom: -24px;*/
   display: flex;
 }
 .sounds-selection {
   position: absolute;
-    display: flex;
-    width: 160px;
-    top: 6px;
-    /* align-items: flex-end; */
-    justify-content: flex-end;
-    /* margin-left: 40px; */
+  display: flex;
+  width: 160px;
+  top: 6px;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+  /* margin-left: 40px; */
 }
 
 .sounds {
@@ -115,6 +117,7 @@
   position: absolute;
   top: 10px;
   right: 15px;
+      padding-right: 5px;
 }
 
 .link-img {
@@ -205,10 +208,21 @@
   margin-top: 20vh;
 }
 
+.markov {
+  min-width: 50%;
+  max-width: 70%;
+  width: 400px;
+  max-height: 60vh;
+  font-size: 25px;
+  font-family: Lato;
+  margin-top: 20vh;
+}
+
 .modal-text {
   word-wrap: break-word;
   color: black;
   text-shadow: -0.5px 1px 6px gray;
+  line-height: 33px;
 }
 .bold {
   font-weight: bold;
@@ -282,7 +296,10 @@
   justify-content: center;
   position: absolute;
   height: 40px;
-  align-items: flex-end;
+  /*align-items: flex-end;*/
+  align-items: flex-start;
+  padding-top: 11px;
+
   top: -1px;
   right: 4px;
 }
@@ -348,6 +365,7 @@
 .more-info {
   position: absolute;
   bottom: 15px;
+  /*bottom: -24px;*/
   right: 20px;
 }
 .more-info:hover {
@@ -357,4 +375,46 @@
 .more-info-link:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.markov-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.evolution {
+  max-height: 30vh;
+}
+
+.flex {
+  display: flex;
+}
+.space-around {
+  justify-content: space-around;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black; /* If you want dots under the hoverable text */*/
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  font-size: 17px;
+  background-color: transparent;
+  color: black;
+  text-align: center;
+  padding: 0px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: -20px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
