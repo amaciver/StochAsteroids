@@ -21,6 +21,7 @@ Duration is determined as the difference in mass of the colliding objects.
 In StochAsteroids, users will be able to:
 
 - [ ] Create asteroids of custom size, color, and velocity vector
+- [ ] Hear sounds on collisions
 - [ ] Randomly seed the initial state for demoing or exploration purposes
 - [ ] Start, pause, restart, and reset the simulation
 - [ ] Select from a list of 'instruments' that will serve as the bases for sound events.
@@ -65,6 +66,10 @@ In addition to the webpack entry file, there will be four scripts involved in th
 
 ### Implementation Timeline
 
+**Over the weekend**:
+- [x] Finished collision physics on my version of the Asteroids project
+- [x] Completed WebAudioAPI Tutorial and loaded basic sound from static assets 
+
 **Day 1**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  Learn the basics of `Web Audio API`.  Goals for the day:
 
 - [x] Get a green bundle with `webpack`
@@ -73,23 +78,23 @@ In addition to the webpack entry file, there will be four scripts involved in th
 
 **Day 2**: Dedicate this day to learning the `Web Audio` API.  First, build out the `AudioEvent` object to connect to the `Board` object.  Then, use `board.js` to create and render `Asteroid`s and `AudioEvent`s. Goals for the day:
 
-- [ ] Complete the `asteroids.js` module (constructor, update functions, colors)
+- [x] Complete the `asteroids.js` module (constructor, update functions, colors)
 - [x] Get sounds to play on collisions
-- [ ] Get collision graphics working
+- [x] Get collision graphics working
 - [x] Make the `Asteroid`s able to be created with mouse.
 
 **Day 3**: Create the logic backend. Build out modular functions for handling the different evolutions. Goals for the day:
 
-- [ ] Export an `AudioEvent` object with correct type and handling logic
-- [ ] Have a functional screen on the `Canvas` frontend that correctly handles creation and running of the simulation.
-- [ ] Make sure that starting, stopping, and resetting works.
+- [x] Export an `AudioEvent` object with correct type and handling logic
+- [x] Have a functional screen on the `Canvas` frontend that correctly handles creation and running of the simulation.
+- [x] Make sure that starting, stopping, and resetting works.
 
 
 **Day 4**: Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
 
-- [ ] Create controls for game speed, stop, start, restart, reset
-- [ ] Build out list of instruments
-- [ ] Have a styled `Canvas`, nice looking controls and title
+- [x] Create controls for game speed, stop, start, restart, reset
+- [x] Build out list of instruments
+- [x] Have a styled `Canvas`, nice looking controls and title
 
 
 ### Bonus features
