@@ -51,7 +51,7 @@ This project will be implemented with the following technologies:
 
 - Vanilla JavaScript for overall structure and game logic,
 - `HTML5 Canvas` for DOM manipulation and rendering,
-- `Web Audio API` for sound generation, processing and control.
+- `Web Audio API` for sound generation, processing and control. `WebAudioAPI` allows for simultaneous sounds with more dependable time triggering
 - Webpack to bundle and serve up the various scripts.
 
 In addition to the webpack entry file, there will be four scripts involved in this project:
@@ -67,12 +67,12 @@ In addition to the webpack entry file, there will be four scripts involved in th
 ### Implementation Timeline
 
 **Over the weekend**:
-- [x] Finished collision physics on my version of the Asteroids project
+- [x] Finished momentum collision physics on my version of the Asteroids project
 - [x] Completed WebAudioAPI Tutorial and loaded basic sound from static assets 
 
 **Day 1**: Setup all necessary Node modules, including getting webpack up and running.  Create `webpack.config.js` as well as `package.json`.  Write a basic entry file and the bare bones of all 4 scripts outlined above.  Learn the basics of `Web Audio API`.  Goals for the day:
 
-- [x] Get a green bundle with `webpack`
+- [x] Get `webpack` serving files and frame out index.html
 - [x] Learn enough `Web Audio` to render an object to the `Canvas` element and create a sound
 - [x] Port over the relevant pieces of my Asteroids(with collision physics) project and implement Asteroid creation
 
@@ -80,15 +80,16 @@ In addition to the webpack entry file, there will be four scripts involved in th
 
 - [x] Complete the `asteroids.js` module (constructor, update functions, colors)
 - [x] Get sounds to play on collisions
+- [x] Build first sound library
 - [x] Get collision graphics working
-- [x] Make the `Asteroid`s able to be created with mouse.
+- [x] Make the `Asteroid`s able to be created with mouse. Set vectors on mouse release.
 
 **Day 3**: Create the logic backend. Build out modular functions for handling the different evolutions. Goals for the day:
 
+- [x] Build Markov Matrix object and link it with collisions
 - [x] Export an `AudioEvent` object with correct type and handling logic
 - [x] Have a functional screen on the `Canvas` frontend that correctly handles creation and running of the simulation.
 - [x] Make sure that starting, stopping, and resetting works.
-
 
 **Day 4**: Install the controls for the user to interact with the game. Style the frontend, making it polished and professional. Goals for the day:
 
