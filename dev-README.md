@@ -21,6 +21,7 @@ Duration is determined as the difference in mass of the colliding objects.
 In StochAsteroids, users will be able to:
 
 - [ ] Create asteroids of custom size, color, and velocity vector
+- [ ] Asteroids rebound with accurate momentum physics
 - [ ] Hear sounds on collisions
 - [ ] Randomly seed the initial state for demoing or exploration purposes
 - [ ] Start, pause, restart, and reset the simulation
